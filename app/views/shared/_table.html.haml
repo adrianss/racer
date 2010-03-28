@@ -1,0 +1,10 @@
+%table.datatable
+  %theader
+    %tr
+      - for title in table.titles
+        %th= title
+  %tbody
+    - for record in table.records
+      %tr
+        - for field in record
+          %td= field

@@ -1,0 +1,4 @@
+%ul.record-actions
+  %li.action-show= link_to "Ver", record
+  %li.action-edit= link_to "Modificar", edit_object_url(record)
+  %li.action-destroy= button_to "Eliminar", object_url(record), { :method => :delete, :class => 'delete-button' }

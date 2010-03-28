@@ -1,0 +1,9 @@
+%h2 <%= plural_name %>
+<% attribute_columns = attributes.map {|o| ":#{o.name}" } -%>
+
+- @<%= plural_name %>_table = dynamic_table(@<%= plural_name %>, <%= "[#{attribute_columns.join(', ')}]" %>)
+- @<%= plural_name %>_table.columns << dynamic_column("Opciones") { |r| render :partial => 'shared/rud_options', :locals => { :record => r } }
+= render :partial => 'shared/table', :object => @<%= plural_name %>_table
+
+- content_for :local_menu do
+  = render :partial => 'shared/local_menu'

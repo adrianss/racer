@@ -1,0 +1,10 @@
+%h2= t('activerecord.models.<%= singular_name %>.one', :default => '<%= singular_name %>')
+
+%dl.record
+<% for attribute in attributes -%>
+  %dt= "#{t('activerecord.attributes.<%= singular_name %>.<%= attribute.column.name %>', :default => '<%= attribute.column.human_name %>')}:"
+  %dd= h @<%= singular_name %>.<%= attribute.name %>
+<% end -%>
+
+- content_for :local_menu do
+  = render :partial => 'shared/local_menu'

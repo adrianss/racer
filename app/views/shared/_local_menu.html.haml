@@ -1,0 +1,12 @@
+%ul#local-menu
+  %li= link_to "Inicio", collection_path
+  - if @object
+    - unless @object.new_record?
+      %li= button_to "Eliminar", object_url(@object), { :method => :delete, :class => 'delete-button' }
+      - unless current_page? edit_object_path(@object)
+        %li= link_to "Modificar", edit_object_path(@object)
+      - unless current_page? object_path(@object)
+        %li= link_to "Ver", object_path(@object)
+  - else
+    - unless current_page? new_object_path
+      %li= link_to_unless_current "Agregar", new_object_path
