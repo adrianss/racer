@@ -9,24 +9,35 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["adrianss"]
-  s.date = %q{2010-02-11}
+  s.date = %q{2010-03-28}
   s.description = %q{Rapid Development package for Ruby on Rails}
   s.email = %q{adrian.saz@gmail.com}
   s.extra_rdoc_files = [
     "README"
   ]
   s.files = [
-    "generators/racer/USAGE",
-     "generators/racer/racer_generator.rb",
-     "lib/app/views/shared/_field.html.haml",
-     "lib/dynamic_table.rb",
+    "app/views/shared/_field.html.haml",
+     "app/views/shared/_local_menu.html.haml",
+     "app/views/shared/_rud_options.html.haml",
+     "app/views/shared/_table.html.haml",
+     "generators/racer_scaffold/USAGE",
+     "generators/racer_scaffold/racer_scaffold_generator.rb",
+     "generators/racer_scaffold/templates/controller.rb",
+     "generators/racer_scaffold/templates/helper.rb",
+     "generators/racer_scaffold/templates/view__form.haml.erb",
+     "generators/racer_scaffold/templates/view_edit.haml.erb",
+     "generators/racer_scaffold/templates/view_index.haml.erb",
+     "generators/racer_scaffold/templates/view_new.haml.erb",
+     "generators/racer_scaffold/templates/view_show.haml.erb",
      "lib/racer.rb",
      "lib/racer/dyna_form_builder.rb",
      "lib/racer/dynamic_column.rb",
      "lib/racer/dynamic_table.rb",
+     "lib/racer/dynamic_table_helper.rb",
      "lib/racer/local_dyna_form_builder.rb",
      "lib/racer_form.rb",
      "lib/racer_table.rb",
+     "lib/restful_resource.rb",
      "rails/init.rb",
      "spec/log/debug.log",
      "spec/racer_spec.rb",
@@ -37,7 +48,7 @@ Gem::Specification.new do |s|
   ]
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Generators and lib for Ruby on Rails}
 
   if s.respond_to? :specification_version then
